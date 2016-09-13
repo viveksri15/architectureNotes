@@ -10,7 +10,7 @@ Typical commincation between the services is through via the network call (ideal
 
 The development of a service should be focussed on enabling changes to be incorporated easily, rather than creating a perfect system. The purpose of a system is not only to serve users, but also to be simple enough for developers and maintainers to make sure system can easily accomodate more business requriements, is extensible, manageable, testable, resilient etc..
 
-It is important for an architect to have strategic goals, have and follow architectural principles, and well-design and delivery practices.
+It is important for an architect to have strategic goals, have and follow architectural principles, and design and delivery practices.
 
 Few standard requirements of a microservice deployment are monitoring, metrics accumulation, alerts, redundancy, load balancing, error handling, resilient and idempotent message broker if required, etc..
 
