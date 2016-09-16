@@ -1,6 +1,8 @@
 # Application Architecture
 
+
 ###### Inspired by https://msdn.microsoft.com/en-us/library/ff650706.aspx
+###### Reference: https://aws.amazon.com/architecture/
 
 ## What is an Application Architecture
 
@@ -98,3 +100,9 @@ Review methodologies include Software Architecture Analysis Method (SAAM), Archi
 
 - 4+1 method: Uses 5 views to describing the system. Covers logical view (object models etc), process view (concurrency etc), physical view (layers), development view, and Use-Case view.
 - UML: Uses 3 views: Functional requirement view, the static structural view(objects, relationships etc), and dynamic behaviour view (interaction among objects etc.).
+
+### Tier vs Layer: Tier is the physical component, like servers. Layer describes the logical grouping of functionalities, like Database Layer, Web Layer etc.
+
+A typical web service consists of Presentation Layer, Service Layer, Application Layer, Data Layer. All of these layers may be broken down into modules, or microservices depending on distinct business domains, complexities, resuabulity etc. Also, all these layers have to deal with logging, monitoring, configuration, caching, authentication, discovery and other common concerns. Each of these (cross cutting) concerns may be deployed as centralised piece as a service. For example, in the diagram mentioned [here](http://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_ecommerce_webfrontend_14.pdf), caching and logging can be seen as saperate layers. There is a trade-off between benefits of having multiple layers (reusability, easy deployment, redundancy, loose coupling) and costs associated with them (complexity, network communication cost etc.). The trade-off should be properly considered when going deciding a layering strategy.
+
+Interaction between layers can be strict (which means a layer can interact only with the layer just below it) or loose (which means layers can be bypassed). Strict interaction has an advantage of simplicity and ease of change, but suffers from emtpy APIs, whose only purpose can be enabling communication across layers without adding any benefits. Loose coupling can take care of this problem of empty APIs, but the cost of changes can go high due to wide impact of a change across many layers.
