@@ -3,6 +3,8 @@
 
 ###### Inspired by https://msdn.microsoft.com/en-us/library/ff650706.aspx
 ###### Reference: https://aws.amazon.com/architecture/
+###### Reference: https://en.wikipedia.org/wiki/Software_design_pattern
+###### Reference: https://camel.apache.org/enterprise-integration-patterns.html
 
 ## What is an Application Architecture
 
@@ -78,7 +80,7 @@ These are not mutually exclusive, but one or more of them work together to creat
 
 ## Techniques
 
-Software Architecture, design and development is an iterative process with following steps
+Software Architecture, design and development is an iterative process of steps focusing on discussing and improving candidate solutions with following steps
 
 1. Identify architecture objectives
 2. Identify key (business critical, high impact, etc.) scenarios convering all the required functionalities and users of the application.
@@ -101,7 +103,9 @@ Review methodologies include Software Architecture Analysis Method (SAAM), Archi
 - 4+1 method: Uses 5 views to describing the system. Covers logical view (object models etc), process view (concurrency etc), physical view (layers), development view, and Use-Case view.
 - UML: Uses 3 views: Functional requirement view, the static structural view(objects, relationships etc), and dynamic behaviour view (interaction among objects etc.).
 
-### Tier vs Layer: Tier is the physical component, like servers. Layer describes the logical grouping of functionalities, like Database Layer, Web Layer etc.
+### Layers and Tiers
+
+**Tier vs Layer**: Tier is the physical component, like servers. Layer describes the logical grouping of functionalities, like Database Layer, Web Layer etc.
 
 A typical web service consists of Presentation Layer, Service Layer, Application Layer, Data Layer. All of these layers may be broken down into modules, or microservices depending on distinct business domains, complexities, resuabulity etc. Also, all these layers have to deal with logging, monitoring, configuration, caching, authentication, discovery and other common concerns. Each of these (cross cutting) concerns may be deployed as centralised piece as a service. For example, in the diagram mentioned [here](http://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_ecommerce_webfrontend_14.pdf), caching and logging can be seen as saperate layers. There is a trade-off between benefits of having multiple layers (reusability, easy deployment, redundancy, loose coupling) and costs associated with them (complexity, network communication cost etc.). The trade-off should be properly considered when going deciding a layering strategy.
 
