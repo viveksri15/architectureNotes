@@ -12,10 +12,10 @@
 * Assumptions
 * Read/Write ratio
 
-## Work on candidate solution, identify issues and areas of improvement, trade-offs, repeat
+### Work on candidate solution, identify issues and areas of improvement, trade-offs, repeat
 	
-## Everything is a trade-off :)
-## Everything can be fixed by introducing one more layer :)
+### Everything is a trade-off :)
+### Everything can be fixed by introducing one more layer :)
 
 ## SOA/Microservice Design
 * Service Boundries
@@ -24,7 +24,6 @@
 * Saperation of concerns
 * Single Responsibility Principle
 * CAP theorem
-* 
 
 ## Computational Pieces
 * Close to Data
@@ -32,7 +31,8 @@
 * Reactive
 * Threading model
 * Process or Thread Driven
-* 
+* Non Blocking
+
 ## API/Services
 ## Data Transport
 * Sync
@@ -41,6 +41,7 @@
 	* Atmost/Exactly/Atleast once delivery guarentees
 * Idempotency
 * Background
+
 ## Data Storage
 * Memory
 * FS
@@ -71,7 +72,7 @@
 * Metrics and Events
 * Alerts
 * Error handling
-* 
+
 ## Scale of Design
 ## Variations for Scalability (Horizontal/Vertical)
 ## Quality Attributes:
